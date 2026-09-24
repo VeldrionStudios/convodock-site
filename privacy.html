@@ -96,9 +96,7 @@ a:focus {
   place-items: center;
   width: 2.25rem;
   height: 2.25rem;
-  border: 1px solid rgba(54, 245, 234, 0.42);
   border-radius: 0.75rem;
-  background: linear-gradient(135deg, rgba(54, 245, 234, 0.18), rgba(46, 140, 255, 0.16));
   box-shadow: 0 0 24px rgba(54, 245, 234, 0.16);
 }
 
@@ -529,9 +527,13 @@ p {
         <nav class="nav" aria-label="Main navigation">
           <a class="brand" href="index.html" aria-label="ConvoDock home">
             <span class="brand-mark" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M4 9.5C4 6.5 6.4 4 9.4 4h4.2C16.6 4 19 6.5 19 9.5v1.3c0 3-2.4 5.5-5.4 5.5H10l-4.6 3.8v-4.9A5.4 5.4 0 0 1 4 11V9.5Z" stroke="#36F5EA" stroke-width="1.8" />
-                <path d="M11 12.5c0-2.6 2.1-4.7 4.7-4.7h.8c2.6 0 4.7 2.1 4.7 4.7v.7c0 2.6-2.1 4.7-4.7 4.7h-.9l-3.1 2.3v-3.1A4.7 4.7 0 0 1 11 13.2v-.7Z" stroke="#2E8CFF" stroke-width="1.8" />
+              <svg viewBox="0 0 108 108" fill="none">
+                <rect width="108" height="108" rx="24" fill="#04131C" />
+                <circle cx="54" cy="54" r="45" fill="#071F2C" />
+                <path d="M18 36c0-12 9-20 23-20h15c13 0 22 9 22 21v7c0 13-9 21-22 21h-6L33 83l4-17c-11-4-19-12-19-23v-7Z" fill="#25D8CF" />
+                <path d="M38 49c0-11 9-19 21-19h12c13 0 22 9 22 21v7c0 12-9 20-22 20l15 14-8-16c-23 0-40-10-40-21v-6Z" fill="#2E8CFF" />
+                <path d="M25 34c3-8 11-12 21-12h10c6 0 12 2 16 6-11-3-22-3-31-1-8 1-13 3-16 7Z" fill="#FFFFFF" opacity=".18" />
+                <path d="M44 48c3-7 9-10 17-10h10c5 0 11 2 15 6-9-3-18-3-27-1-6 1-12 2-15 5Z" fill="#FFFFFF" opacity=".16" />
               </svg>
             </span>
             ConvoDock
@@ -555,7 +557,7 @@ p {
           <section>
             <h2>Overview</h2>
             <p>
-              ConvoDock is a local-first inbox for notification-derived messages. It does not require a cloud account for the local inbox and does not upload your contacts or messages to a ConvoDock server by default.
+              ConvoDock is an Android, local-first inbox for notification-derived messages. It does not require a cloud account for the local inbox and does not upload your contacts or messages to a ConvoDock server.
             </p>
             <p>
               ConvoDock is published by Veldrion Studios. For privacy questions, deletion help or rights requests, contact <a href="mailto:veldrionstudios@gmail.com">veldrionstudios@gmail.com</a>.
@@ -570,9 +572,9 @@ p {
               <li>Sender names, conversation titles, message previews or message text, timestamps, source app names, package names, notification identifiers, notification removal events and available quick-reply actions.</li>
               <li>Sender icons, notification image previews, attachment metadata or attachment media URIs only where Android notifications legitimately expose them.</li>
               <li>Files, photos or links you choose to import manually through Android's share sheet.</li>
-              <li>Contacts you manually create, contacts you choose to import from your phone contacts, custom contact photos, initials, favourites and linked service identities.</li>
+              <li>Contacts you manually create, contacts you choose to import from your phone contacts, custom contact photos copied into app-private storage, initials, favourites and linked service identities.</li>
               <li>Per-app and per-contact capture preferences, unread counts, search/filter state, theme choice and privacy settings.</li>
-              <li>Local entitlement state for a trial or lifetime unlock.</li>
+              <li>Local entitlement state for a free trial or lifetime unlock, and Google Play purchase verification records where needed for purchase, restoration, refund or revocation handling.</li>
             </ul>
           </section>
 
@@ -632,7 +634,7 @@ p {
           <section>
             <h2>Storage and security</h2>
             <p>
-              Captured messages, linked identities and sensitive metadata are stored locally on your device in an encrypted database. The database key is protected with platform secure storage. Copied notification attachments and user-shared attachments are stored locally in encrypted app-private files using an Android Keystore-protected key. Queued native notification events are stored in protected app storage and are removed after successful processing to minimise retention.
+              Captured messages, linked identities and sensitive metadata are stored locally on your device in an encrypted database. The database key is protected with platform secure storage. Copied notification attachments and user-shared attachments are stored locally in encrypted app-private files using an Android Keystore-protected key. Custom contact photos are copied into ConvoDock app-private storage. Queued native notification events are stored in protected app storage and are removed after successful processing to minimise retention.
             </p>
             <p>
               No local device storage can be guaranteed perfectly secure. Anyone with access to your unlocked device, backups, operating-system vulnerabilities or compromised device credentials may be able to access app data.
@@ -642,10 +644,13 @@ p {
           <section>
             <h2>Sharing and servers</h2>
             <p>
-              ConvoDock does not sell personal data. ConvoDock does not upload notification-derived messages or contacts to a ConvoDock server by default.
+              ConvoDock does not sell personal data. ConvoDock does not upload notification-derived messages, attachments, imported contacts or linked identities to a ConvoDock server.
             </p>
             <p>
-              The current Android inbox does not use a ConvoDock cloud account, cross-device sync, in-app calling, email inbox aggregation, calendar/reminder integration or advertising network.
+              The current Android inbox does not use a ConvoDock cloud account, cross-device sync, in-app calling, email inbox aggregation, calendar/reminder integration, analytics SDK or advertising network.
+            </p>
+            <p>
+              If you buy or restore the lifetime unlock, ConvoDock may send Google Play purchase verification data to a Veldrion Studios purchase-verification backend. This backend is used only to check the purchase with the Google Play Developer API, acknowledge valid purchases, restore access, and recognise cancelled, refunded or revoked purchases. It does not receive your messages, notification contents, contacts, contact photos or attachments.
             </p>
             <p>
               If optional cloud sync, analytics, crash reporting, email/calendar integrations or account features are added later, this policy and the in-app disclosures should be updated before those features are released.
@@ -655,10 +660,13 @@ p {
           <section>
             <h2>Purchases</h2>
             <p>
-              Purchases are processed by Google Play or Apple's App Store. The stores may process payment details under their own terms. ConvoDock does not receive your full payment card details.
+              The Android lifetime unlock is processed by Google Play. Google may process payment details under its own terms. ConvoDock does not receive your full payment card details.
             </p>
             <p>
-              ConvoDock may process product identifiers, purchase status, transaction identifiers, receipts or purchase tokens needed to unlock access, handle pending purchases, restore purchases, recognise cancellations or reflect refunds.
+              ConvoDock offers a genuinely free seven-day local trial that does not ask for payment details, does not auto-renew and does not automatically charge when it expires. After the trial, you may choose whether to buy the optional lifetime unlock. The intended lifetime price is GBP 4.99, with Google Play supplying the final displayed local price.
+            </p>
+            <p>
+              To verify purchases, ConvoDock may process product identifiers, package name, purchase status, transaction identifiers, purchase tokens and hashed purchase-token records needed to unlock access, acknowledge valid purchases, handle pending purchases, restore purchases, recognise cancellations, revoke refunded purchases and prevent duplicate grants. Purchase tokens are not embedded as app secrets and should not be stored in public repositories.
             </p>
           </section>
 
@@ -675,10 +683,13 @@ p {
           <section>
             <h2>Retention and deletion</h2>
             <p>
-              ConvoDock keeps locally captured messages, copied attachments, shared imports, contacts, identity links and settings on your device until you delete them, use the in-app delete-all-data control, clear app storage or uninstall the app.
+              ConvoDock keeps locally captured messages, copied attachments, shared imports, contacts, identity links, copied contact photos and settings on your device until you delete them, use the in-app delete-all-data control, clear app storage or uninstall the app.
             </p>
             <p>
               Disconnecting notification access or pausing an app stops future capture but does not automatically delete existing local records. Successfully processed queued notification events are removed from the native queue to minimise retention.
+            </p>
+            <p>
+              Purchase verification records may be retained by Veldrion Studios and Google for support, accounting, fraud prevention, restoration and legal compliance purposes. Support emails are retained only as long as needed to respond, maintain records and protect the service unless a longer period is required by law.
             </p>
           </section>
 
@@ -698,19 +709,12 @@ p {
           </section>
 
           <section>
-            <h2>iPhone and iPad limits</h2>
-            <p>
-              iOS and iPadOS do not provide ConvoDock with a general way to read notifications from other messaging apps. ConvoDock should not be described as a functional third-party messaging notification inbox on iPhone or iPad unless a supported Apple capability or official integration is added and approved.
-            </p>
-          </section>
-
-          <section>
             <h2>Your rights</h2>
             <p>
               Depending on where you live, you may have rights to access, correct, delete or restrict processing of personal data, object to certain processing, or complain to a data-protection authority. Much of ConvoDock's inbox data is stored only on your device, so you can delete it directly in the app or by clearing app storage.
             </p>
             <p>
-              For support records or store-related records available to Veldrion Studios, contact <a href="mailto:veldrionstudios@gmail.com">veldrionstudios@gmail.com</a>. If UK data-protection law applies, you can contact the UK Information Commissioner's Office at <a href="https://ico.org.uk/">ico.org.uk</a>.
+              For support records or store-related records available to Veldrion Studios, contact <a href="mailto:veldrionstudios@gmail.com">veldrionstudios@gmail.com</a>. If UK data-protection law applies, you can contact the UK Information Commissioner's Office at <a href="https://ico.org.uk/">https://ico.org.uk/</a>.
             </p>
           </section>
 
