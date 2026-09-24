@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Support | ConvoDock</title>
+    <meta
+      name="description"
+      content="Support information for ConvoDock, including notification access, local data deletion, quick replies, iOS limits and purchases."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <style>
+:root {
+  --navy-950: #06131d;
+  --navy-900: #0a1a27;
+  --navy-800: #102636;
+  --navy-700: #172d3b;
+  --teal-500: #168b80;
+  --teal-300: #36f5ea;
+  --blue-500: #2e8cff;
+  --text: #f3f8ff;
+  --muted: #b7c8d8;
+  --line: #254257;
+  --danger: #ff6b7a;
+  color-scheme: dark;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(22, 139, 128, 0.36), transparent 34rem),
+    radial-gradient(circle at 86% 18%, rgba(46, 140, 255, 0.18), transparent 28rem),
+    linear-gradient(180deg, var(--navy-900), var(--navy-950) 42%);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--teal-300);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.site-shell {
+  min-height: 100vh;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba(37, 66, 87, 0.72);
+  background: rgba(6, 19, 29, 0.84);
+  backdrop-filter: blur(18px);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 0.9rem 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text);
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid rgba(54, 245, 234, 0.42);
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, rgba(54, 245, 234, 0.18), rgba(46, 140, 255, 0.16));
+  box-shadow: 0 0 24px rgba(54, 245, 234, 0.16);
+}
+
+.brand-mark svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav-links a {
+  color: var(--muted);
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+}
+
+.nav-links a[aria-current="page"],
+.nav-links a:hover,
+.nav-links a:focus {
+  color: var(--text);
+  background: rgba(20, 44, 61, 0.82);
+  text-decoration: none;
+}
+
+main {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(17rem, 0.9fr);
+  gap: clamp(2rem, 7vw, 5rem);
+  align-items: center;
+  min-height: calc(100vh - 5.5rem);
+  padding: clamp(3rem, 8vw, 6rem) 0;
+}
+
+.eyebrow {
+  color: var(--teal-300);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text);
+  line-height: 1.08;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+h1 {
+  max-width: 12ch;
+  font-size: clamp(3.4rem, 13vw, 7.8rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 6vw, 3.4rem);
+}
+
+h3 {
+  font-size: 1.15rem;
+}
+
+p {
+  margin: 0;
+}
+
+.lead {
+  max-width: 41rem;
+  margin-top: 1.25rem;
+  color: var(--muted);
+  font-size: clamp(1.08rem, 2.8vw, 1.35rem);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  padding: 0.72rem 1rem;
+  font-weight: 800;
+}
+
+.button.primary {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--blue-500), var(--teal-500));
+}
+
+.button.secondary {
+  color: var(--text);
+  border-color: var(--line);
+  background: rgba(12, 33, 48, 0.62);
+}
+
+.notice {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 1px solid rgba(54, 245, 234, 0.22);
+  border-radius: 1rem;
+  background: rgba(12, 33, 48, 0.58);
+  color: var(--muted);
+}
+
+.phone-card {
+  width: min(100%, 23rem);
+  margin-inline: auto;
+  border: 1px solid rgba(122, 157, 184, 0.34);
+  border-radius: 2rem;
+  background:
+    linear-gradient(180deg, rgba(23, 45, 59, 0.86), rgba(6, 19, 29, 0.96)),
+    var(--navy-950);
+  box-shadow:
+    0 1.5rem 4rem rgba(0, 0, 0, 0.42),
+    inset 0 0 0 0.45rem rgba(46, 140, 255, 0.08);
+  padding: 1.15rem;
+}
+
+.phone-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.search-pill {
+  margin: 1rem 0;
+  padding: 0.82rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(20, 44, 61, 0.78);
+}
+
+.chat-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.chat-row {
+  display: grid;
+  grid-template-columns: 3rem 1fr auto;
+  gap: 0.8rem;
+  align-items: center;
+  min-height: 4.5rem;
+  padding: 0.75rem;
+  border: 1px solid rgba(37, 66, 87, 0.62);
+  border-radius: 1rem;
+  background: rgba(12, 33, 48, 0.78);
+}
+
+.avatar {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: #6688a7;
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.service-dot {
+  position: absolute;
+  right: -0.15rem;
+  bottom: -0.15rem;
+  display: grid;
+  place-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 0.38rem;
+  background: var(--teal-500);
+  font-size: 0.62rem;
+  border: 2px solid var(--navy-950);
+}
+
+.row-title {
+  font-weight: 800;
+}
+
+.row-preview,
+.row-time {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.badge {
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.6rem;
+  height: 1.6rem;
+  padding: 0 0.45rem;
+  border-radius: 999px;
+  background: var(--blue-500);
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 0.78rem;
+}
+
+.section {
+  padding: clamp(3rem, 8vw, 5rem) 0;
+  border-top: 1px solid rgba(37, 66, 87, 0.58);
+}
+
+.section-header {
+  max-width: 42rem;
+  margin-bottom: 1.6rem;
+}
+
+.section-header p {
+  margin-top: 0.85rem;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: rgba(12, 33, 48, 0.72);
+  padding: 1.2rem;
+}
+
+.card-icon {
+  display: grid;
+  place-items: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  margin-bottom: 0.85rem;
+  border-radius: 0.85rem;
+  color: var(--teal-300);
+  background: rgba(54, 245, 234, 0.1);
+  border: 1px solid rgba(54, 245, 234, 0.18);
+}
+
+.card p,
+.policy-body p,
+.policy-body li {
+  color: var(--muted);
+}
+
+.policy-hero {
+  padding: clamp(3rem, 8vw, 5.5rem) 0 2.5rem;
+  max-width: 52rem;
+}
+
+.policy-hero h1 {
+  max-width: 13ch;
+  font-size: clamp(2.75rem, 10vw, 5.8rem);
+}
+
+.policy-meta {
+  margin-top: 1.2rem;
+  color: var(--muted);
+}
+
+.policy-body {
+  display: grid;
+  gap: 1.2rem;
+  max-width: 56rem;
+  padding-bottom: 5rem;
+}
+
+.policy-body section {
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: rgba(12, 33, 48, 0.68);
+}
+
+.policy-body h2 {
+  margin-bottom: 0.7rem;
+  font-size: clamp(1.45rem, 4vw, 2rem);
+}
+
+.policy-body ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 1rem;
+}
+
+.support-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.support-item {
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: rgba(12, 33, 48, 0.68);
+}
+
+.support-item h3 {
+  margin-bottom: 0.35rem;
+}
+
+.site-footer {
+  border-top: 1px solid rgba(37, 66, 87, 0.72);
+  background: rgba(6, 19, 29, 0.72);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.4rem 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .hero,
+  .support-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 3rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    font-size: 16px;
+  }
+
+  main,
+  .nav,
+  .footer-inner {
+    width: min(100% - 1rem, 1120px);
+  }
+
+  .nav-links a {
+    padding-inline: 0.62rem;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .phone-card {
+    border-radius: 1.4rem;
+    padding: 0.8rem;
+  }
+
+  .chat-row {
+    grid-template-columns: 2.7rem 1fr;
+  }
+
+  .row-time {
+    display: none;
+  }
+}
+
+
+    </style>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <nav class="nav" aria-label="Main navigation">
+          <a class="brand" href="index.html" aria-label="ConvoDock home">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 9.5C4 6.5 6.4 4 9.4 4h4.2C16.6 4 19 6.5 19 9.5v1.3c0 3-2.4 5.5-5.4 5.5H10l-4.6 3.8v-4.9A5.4 5.4 0 0 1 4 11V9.5Z" stroke="#36F5EA" stroke-width="1.8" />
+                <path d="M11 12.5c0-2.6 2.1-4.7 4.7-4.7h.8c2.6 0 4.7 2.1 4.7 4.7v.7c0 2.6-2.1 4.7-4.7 4.7h-.9l-3.1 2.3v-3.1A4.7 4.7 0 0 1 11 13.2v-.7Z" stroke="#2E8CFF" stroke-width="1.8" />
+              </svg>
+            </span>
+            ConvoDock
+          </a>
+          <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="support.html" aria-current="page">Support</a>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <div class="policy-hero">
+          <p class="eyebrow">Support</p>
+          <h1>ConvoDock Support</h1>
+          <p class="policy-meta">
+            Help with setup, privacy controls, purchases and platform limits.
+          </p>
+        </div>
+
+        <section class="support-grid section" aria-label="Support information">
+          <div class="card">
+            <h2>Contact support</h2>
+            <p>
+              Publisher: Veldrion Studios<br />
+              Email:
+              <a href="mailto:veldrionstudios@gmail.com">veldrionstudios@gmail.com</a>
+            </p>
+          </div>
+
+          <div class="support-list">
+            <div class="support-item">
+              <h3>No messages are appearing</h3>
+              <p>
+                On Android, check that notification access is enabled for ConvoDock and that the original messaging app is allowed to show message notifications. ConvoDock cannot import old chat history.
+              </p>
+            </div>
+            <div class="support-item">
+              <h3>Reply is unavailable</h3>
+              <p>
+                Direct reply works only when the original Android notification includes an active quick-reply action. If the action is missing or expired, open the original app.
+              </p>
+            </div>
+            <div class="support-item">
+              <h3>Delete local data</h3>
+              <p>
+                Use ConvoDock's privacy controls to delete local messages, contacts and identity links. You can also clear app storage or uninstall the app from your device settings.
+              </p>
+            </div>
+            <div class="support-item">
+              <h3>Disconnect notification access</h3>
+              <p>
+                Open Android Settings, go to Special app access, then Notification access, and turn off ConvoDock. This stops future notification capture.
+              </p>
+            </div>
+            <div class="support-item">
+              <h3>iPhone and iPad</h3>
+              <p>
+                iOS and iPadOS do not provide ConvoDock with a general third-party messaging notification inbox. Do not expect Android-style notification capture on iPhone or iPad.
+              </p>
+            </div>
+            <div class="support-item">
+              <h3>Purchases and restore</h3>
+              <p>
+                Purchases are handled by Google Play or Apple's App Store. If a purchase is pending, cancelled or refunded, ConvoDock will reflect the store status when available. Use Restore Purchases after reinstalling or changing devices.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <span>© 2026 Veldrion Studios</span>
+          <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="support.html">Support</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
