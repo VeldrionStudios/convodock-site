@@ -650,7 +650,7 @@ p {
               The current Android inbox does not use a ConvoDock cloud account, cross-device sync, in-app calling, email inbox aggregation, calendar/reminder integration, analytics SDK or advertising network.
             </p>
             <p>
-              If you buy or restore the lifetime unlock, ConvoDock may send Google Play purchase verification data to a Veldrion Studios purchase-verification backend. This backend is used only to check the purchase with the Google Play Developer API, acknowledge valid purchases, restore access, and recognise cancelled, refunded or revoked purchases. It does not receive your messages, notification contents, contacts, contact photos or attachments.
+              If you buy or restore the lifetime unlock, ConvoDock may send Google Play purchase verification data to a Veldrion Studios purchase-verification backend. This backend is used only to check the purchase with the Google Play Developer API, acknowledge valid purchases, restore access, bind a purchase token to a hashed local ConvoDock installation identifier, and recognise cancelled, refunded or revoked purchases. It does not receive your messages, notification contents, contacts, contact photos or attachments.
             </p>
             <p>
               If optional cloud sync, analytics, crash reporting, email/calendar integrations or account features are added later, this policy and the in-app disclosures should be updated before those features are released.
@@ -666,7 +666,7 @@ p {
               ConvoDock offers a genuinely free seven-day local trial that does not ask for payment details, does not auto-renew and does not automatically charge when it expires. After the trial, you may choose whether to buy the optional lifetime unlock. The intended lifetime price is GBP 4.99, with Google Play supplying the final displayed local price.
             </p>
             <p>
-              To verify purchases, ConvoDock may process product identifiers, package name, purchase status, transaction identifiers, purchase tokens and hashed purchase-token records needed to unlock access, acknowledge valid purchases, handle pending purchases, restore purchases, recognise cancellations, revoke refunded purchases and prevent duplicate grants. Purchase tokens are not embedded as app secrets and should not be stored in public repositories.
+              To verify purchases, ConvoDock may process product identifiers, package name, purchase status, transaction identifiers, purchase tokens, a hashed random app-installation identifier, hashed purchase-token records and hashed order identifiers needed to unlock access, acknowledge valid purchases, handle pending purchases, restore purchases, recognise cancellations, revoke refunded purchases and reduce token replay abuse. Purchase tokens are not embedded as app secrets and should not be stored in public repositories.
             </p>
           </section>
 
@@ -689,7 +689,7 @@ p {
               Disconnecting notification access or pausing an app stops future capture but does not automatically delete existing local records. Successfully processed queued notification events are removed from the native queue to minimise retention.
             </p>
             <p>
-              Purchase verification records may be retained by Veldrion Studios and Google for support, accounting, fraud prevention, restoration and legal compliance purposes. Support emails are retained only as long as needed to respond, maintain records and protect the service unless a longer period is required by law.
+              Purchase verification records, including hashed purchase-token and app-installation records, may be retained by Veldrion Studios and Google for support, accounting, fraud prevention, restoration and legal compliance purposes. Support emails are retained only as long as needed to respond, maintain records and protect the service unless a longer period is required by law.
             </p>
           </section>
 
