@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy | ConvoDock</title>
+    <meta
+      name="description"
+      content="ConvoDock privacy policy covering Android notification access, local encrypted message storage, contact permissions, app choices, retention and deletion."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <nav class="nav" aria-label="Main navigation">
+          <a class="brand" href="index.html" aria-label="ConvoDock home">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 9.5C4 6.5 6.4 4 9.4 4h4.2C16.6 4 19 6.5 19 9.5v1.3c0 3-2.4 5.5-5.4 5.5H10l-4.6 3.8v-4.9A5.4 5.4 0 0 1 4 11V9.5Z" stroke="#36F5EA" stroke-width="1.8" />
+                <path d="M11 12.5c0-2.6 2.1-4.7 4.7-4.7h.8c2.6 0 4.7 2.1 4.7 4.7v.7c0 2.6-2.1 4.7-4.7 4.7h-.9l-3.1 2.3v-3.1A4.7 4.7 0 0 1 11 13.2v-.7Z" stroke="#2E8CFF" stroke-width="1.8" />
+              </svg>
+            </span>
+            ConvoDock
+          </a>
+          <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="privacy.html" aria-current="page">Privacy</a>
+            <a href="support.html">Support</a>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <div class="policy-hero">
+          <p class="eyebrow">Privacy Policy</p>
+          <h1>ConvoDock Privacy Policy</h1>
+          <p class="policy-meta">Effective date: 24 September 2026</p>
+        </div>
+
+        <article class="policy-body">
+          <section>
+            <h2>Overview</h2>
+            <p>
+              ConvoDock is a local-first inbox for notification-derived messages. It does not require a cloud account for the local inbox and does not upload your contacts or messages to a ConvoDock server by default.
+            </p>
+            <p>
+              ConvoDock is published by Veldrion Studios. For privacy questions, deletion help or rights requests, contact <a href="mailto:veldrionstudios@gmail.com">veldrionstudios@gmail.com</a>.
+            </p>
+          </section>
+
+          <section>
+            <h2>What ConvoDock processes</h2>
+            <p>ConvoDock may process the following data on your device:</p>
+            <ul>
+              <li>Notification content and metadata from source apps you choose to capture after enabling Android notification access.</li>
+              <li>Sender names, conversation titles, message previews or message text, timestamps, source app names, package names, notification identifiers, notification removal events and available quick-reply actions.</li>
+              <li>Sender icons, notification image previews, attachment metadata or attachment media URIs only where Android notifications legitimately expose them.</li>
+              <li>Files, photos or links you choose to import manually through Android's share sheet.</li>
+              <li>Contacts you manually create, contacts you choose to import from your phone contacts, custom contact photos, initials, favourites and linked service identities.</li>
+              <li>Per-app and per-contact capture preferences, unread counts, search/filter state, theme choice and privacy settings.</li>
+              <li>Local entitlement state for a trial or lifetime unlock.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Android notification access</h2>
+            <p>
+              Android notification access is sensitive. If you enable it, ConvoDock can read notification content and metadata visible to Android from supported source apps. Notifications can contain private messages, one-time codes, financial alerts, health information or other sensitive information.
+            </p>
+            <p>
+              ConvoDock uses notification access only to build the local inbox, update notification-derived message state and send supported quick replies through Android notification reply actions when an active source notification provides one.
+            </p>
+            <ul>
+              <li>ConvoDock starts capturing only after notification access is granted.</li>
+              <li>ConvoDock can only read content exposed by notifications; it does not retrieve complete message history.</li>
+              <li>ConvoDock may make a best-effort attempt to copy a notification-exposed attachment or media URI into local encrypted storage. If Android or the source app does not grant access, ConvoDock stores an unavailable-attachment placeholder and offers to open the original app.</li>
+              <li>ConvoDock attempts to filter likely one-time passcodes and verification-code notifications before storing them, but no automated filter can identify every sensitive notification.</li>
+              <li>If the original app hides notification content, ConvoDock may store only that the content was hidden or unavailable.</li>
+              <li>ConvoDock does not request SMS database access, call-log access or accessibility access for message scraping.</li>
+              <li>ConvoDock does not use unofficial messaging APIs, reverse-engineered private endpoints or automated credential collection.</li>
+              <li>Quick replies are sent only through an available Android notification reply action. ConvoDock does not claim delivery, read status or end-to-end message history.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Source app choices and duplicate alerts</h2>
+            <p>
+              ConvoDock includes per-app capture controls. You can pause capture for a supported source app, and ConvoDock will ignore new notifications from that app while paused. Existing local messages remain until you delete them.
+            </p>
+            <p>
+              ConvoDock can show its own notifications for captured messages if you allow ConvoDock notifications in Android. To reduce duplicate alerts, ConvoDock may guide you to Android notification settings for each source app and say: "now turn off source app pop-ups if you want only ConvoDock alerts." This is optional. ConvoDock does not silently change another app's lock-screen, badge, sound, vibration or pop-up settings.
+            </p>
+          </section>
+
+          <section>
+            <h2>Manual share imports</h2>
+            <p>
+              If you choose ConvoDock from Android's share sheet, ConvoDock may import the shared text, link, photo or file into a local "Shared to ConvoDock" conversation. Manual share imports are initiated by you and are not automatic source-app capture.
+            </p>
+            <p>
+              Shared files are copied into ConvoDock's local app storage where possible and encrypted with an Android Keystore-protected key. If the shared item cannot be copied, ConvoDock may store only that an attachment was shared and unavailable.
+            </p>
+          </section>
+
+          <section>
+            <h2>Contacts, identity links and photos</h2>
+            <p>
+              You can use ConvoDock without importing phone contacts. If you choose to import contacts, ConvoDock uses contact permission only to help organise the local inbox and link identities. You can manually link or unlink source-app identities, pause a linked identity for a contact, rename contacts and choose contact photos.
+            </p>
+            <p>
+              Where a notification exposes a sender image or icon, ConvoDock may use it locally as a suggested or fallback photo. Source apps do not always expose profile photos, and ConvoDock does not scrape source apps to fetch them.
+            </p>
+            <p>
+              Revoking contact permission stops future contact import access but does not automatically delete contacts already stored in ConvoDock. Use ConvoDock's delete controls, clear app storage or uninstall the app to remove local data.
+            </p>
+          </section>
+
+          <section>
+            <h2>Storage and security</h2>
+            <p>
+              Captured messages, linked identities and sensitive metadata are stored locally on your device in an encrypted database. The database key is protected with platform secure storage. Copied notification attachments and user-shared attachments are stored locally in encrypted app-private files using an Android Keystore-protected key. Queued native notification events are stored in protected app storage and are removed after successful processing to minimise retention.
+            </p>
+            <p>
+              No local device storage can be guaranteed perfectly secure. Anyone with access to your unlocked device, backups, operating-system vulnerabilities or compromised device credentials may be able to access app data.
+            </p>
+          </section>
+
+          <section>
+            <h2>Sharing and servers</h2>
+            <p>
+              ConvoDock does not sell personal data. ConvoDock does not upload notification-derived messages or contacts to a ConvoDock server by default.
+            </p>
+            <p>
+              The current Android inbox does not use a ConvoDock cloud account, cross-device sync, in-app calling, email inbox aggregation, calendar/reminder integration or advertising network.
+            </p>
+            <p>
+              If optional cloud sync, analytics, crash reporting, email/calendar integrations or account features are added later, this policy and the in-app disclosures should be updated before those features are released.
+            </p>
+          </section>
+
+          <section>
+            <h2>Purchases</h2>
+            <p>
+              Purchases are processed by Google Play or Apple's App Store. The stores may process payment details under their own terms. ConvoDock does not receive your full payment card details.
+            </p>
+            <p>
+              ConvoDock may process product identifiers, purchase status, transaction identifiers, receipts or purchase tokens needed to unlock access, handle pending purchases, restore purchases, recognise cancellations or reflect refunds.
+            </p>
+          </section>
+
+          <section>
+            <h2>Support and website visits</h2>
+            <p>
+              If you contact support, ConvoDock may process your email address, device/app details and information you choose to include in the support request. Support emails are retained only as long as needed to respond, maintain records and protect the service unless a longer period is required by law.
+            </p>
+            <p>
+              The ConvoDock website may be hosted by a third-party hosting provider that processes standard technical logs such as IP address, browser details and request times for security and reliability.
+            </p>
+          </section>
+
+          <section>
+            <h2>Retention and deletion</h2>
+            <p>
+              ConvoDock keeps locally captured messages, copied attachments, shared imports, contacts, identity links and settings on your device until you delete them, use the in-app delete-all-data control, clear app storage or uninstall the app.
+            </p>
+            <p>
+              Disconnecting notification access or pausing an app stops future capture but does not automatically delete existing local records. Successfully processed queued notification events are removed from the native queue to minimise retention.
+            </p>
+          </section>
+
+          <section>
+            <h2>Your controls</h2>
+            <ul>
+              <li>Grant or revoke Android notification access.</li>
+              <li>Allow or block ConvoDock's own notifications.</li>
+              <li>Choose which source apps ConvoDock captures from.</li>
+              <li>Turn off source app pop-ups yourself in Android settings if you want only ConvoDock alerts.</li>
+              <li>Share files, photos or links into ConvoDock manually through Android's share sheet.</li>
+              <li>Import contacts or use ConvoDock without contact import.</li>
+              <li>Link, unlink or pause source-app identities for a contact.</li>
+              <li>Delete all ConvoDock local data.</li>
+              <li>Open the original source app instead of replying in ConvoDock.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>iPhone and iPad limits</h2>
+            <p>
+              iOS and iPadOS do not provide ConvoDock with a general way to read notifications from other messaging apps. ConvoDock should not be described as a functional third-party messaging notification inbox on iPhone or iPad unless a supported Apple capability or official integration is added and approved.
+            </p>
+          </section>
+
+          <section>
+            <h2>Your rights</h2>
+            <p>
+              Depending on where you live, you may have rights to access, correct, delete or restrict processing of personal data, object to certain processing, or complain to a data-protection authority. Much of ConvoDock's inbox data is stored only on your device, so you can delete it directly in the app or by clearing app storage.
+            </p>
+            <p>
+              For support records or store-related records available to Veldrion Studios, contact <a href="mailto:veldrionstudios@gmail.com">veldrionstudios@gmail.com</a>. If UK data-protection law applies, you can contact the UK Information Commissioner's Office at <a href="https://ico.org.uk/">ico.org.uk</a>.
+            </p>
+          </section>
+
+          <section>
+            <h2>Children</h2>
+            <p>
+              ConvoDock is not directed to children under 13 and should not be used by children where parental consent is required by applicable law.
+            </p>
+          </section>
+
+          <section>
+            <h2>Changes</h2>
+            <p>
+              ConvoDock may update this policy when the app changes. Material privacy changes should be reflected before the related app update is released.
+            </p>
+          </section>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <span>© 2026 Veldrion Studios</span>
+          <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="support.html">Support</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
